@@ -31,7 +31,7 @@ There is a shell script provided in this repository, if you run:
 ./loris_docker.sh
 ```
 
-This script will spin up a Loris image server, and serve images from the `./images` folder.
+This script will download the correct Docker image and spin up a Loris image server, and serve images from the `./images` folder.
 
 You can test if this is working by loading:
 
