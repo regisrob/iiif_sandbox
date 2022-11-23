@@ -1,0 +1,14 @@
+{
+  "name": "iiif_sandbox",
+  "version": "0.1.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "serve": "http-server -p 8081 -a localhost --cors -o /demo/osd -c-1"
+  },
+  "dependencies": {
+    "openseadragon": "^3.1.0"
+  },
+  "devDependencies": {},
+  "keywords": []
+}

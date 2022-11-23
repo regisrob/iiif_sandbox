@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OpenSeaDragon Demo Page</title>
+</head>
+<style type="text/css">
+    #osd {
+        width: 100vw;
+        height: 100vh;
+    }
+</style>
+<body>
+<div id="osd"></div>
+<script src="dist/node_modules/openseadragon/build/openseadragon/openseadragon.min.js"></script>
+<script type="text/javascript">
+    // The tilesource can be passed in from a URI parameter
+    var infoUrl = window.location.search.match(/(\?|&)(tilesource|iiif)\=([^&]*)/)[3];
+
+    var osd_config = {
+        id: "osd",
+        prefixUrl: "dist/node_modules/openseadragon/build/openseadragon/images/",
+        preserveViewport: false,
+        showNavigator: false,
+        defaultZoomLevel: 0,
+        visibilityRatio: 1,
+        //minZoomLevel: 0.5,
+        showReferenceStrip: true,
+        //constrainDuringPan: true,
+        sequenceMode: true,
+        tileSources: infoUrl
+    }
+    OpenSeadragon(osd_config);
+</script>
+</body>
+</html>
